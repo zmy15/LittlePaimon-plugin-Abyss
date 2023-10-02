@@ -40,6 +40,7 @@ sign = on_command(
     "验证签到",
     priority=7,
     block=True,
+    aliases={"原神签到"},
     state={
         "pm_name": "验证签到",
         "pm_description": "*执行米游社签到操作，并对验证码进行验证",
@@ -67,6 +68,7 @@ ti = on_command(
     "验证体力",
     priority=7,
     block=True,
+    aliases={"ssbq","体力"},
     state={
         "pm_name": "体力",
         "pm_description": "*验证体力(uid)",
@@ -106,6 +108,7 @@ sr_sign = on_command(
     "sr验证签到",
     priority=7,
     block=True,
+    aliases={"星铁签到", "sr签到"},
     state={
         "pm_name": "sr验证签到",
         "pm_description": "*执行星铁签到操作，并对验证码进行验证",
@@ -130,7 +133,8 @@ sr_all_sign = on_command(
 get_pass = on_command(
     "米游社过码",
     priority=8,
-    rule=to_me(),
+    aliases={"ys", "sy", "ysa"},
+    block=False,
     state={
         "pm_name": "米游社过码",
         "pm_description": "进行一次米游社社区验证码验证,可能解开一些过不去的地方",
